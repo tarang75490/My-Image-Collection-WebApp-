@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+
+    {{>links}}
+    <script src="js/image_js1.js"></script>
+</head>
+<body>
+  {{>header}}
+  <div class = 'container'><h1>My Testing Page</h1>
+      <form id = 'form2'>
+            <div class="form-group">
+            <label for="title">Title:</label>
+                 <input type="text" class="form-control" id="title" placeholder="Enter Title" name="title">
+            </div>
+            <div class="form-group">
+            <label for="image">Image File :</label>
+                 <input type="file" id="image" onchange="encodeImageFileAsURL(this)" />
+            </div>
+            <div id='tags' class="form-group row">
+                    <div  class="col-xs-3">
+                        <input type="text" class="form-control" id="1" name="title">
+                    </div>
+            </div>
+            <div>
+            <button type="button" id='tagbut' class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-plus"></span><span id="info"> Add Tag</span>
+          </button>
+          </div>
+            <br>
+             <button type="submit"  class="btn btn-default">Submit</button>
+     </form>
+     <div id ="image-preview"></div>
+     </div>
+      
+</div>
+</body>
+</html>
