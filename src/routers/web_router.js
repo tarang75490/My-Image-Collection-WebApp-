@@ -39,7 +39,7 @@ app.get('/all_users',(req,res)=>{
     })
 })
 app.get('/SignUp',(req,res)=>{
-    res.render('signup',{
+    res.render('Signup',{
         'name':'tarang'
     })
 })
