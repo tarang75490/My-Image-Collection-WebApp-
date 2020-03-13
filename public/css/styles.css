@@ -1,9 +1,40 @@
+body{
+    background-color: white;
+    color: #12475f;
+    /* font-family: 'Arvo', serif; */
+    line-height: 1.6;
+
+
+}
+
 #img_caption{
     font-family: 'Fredoka One', cursive;
 }
 h1,h3{
     font-family: 'Baloo Da 2', cursive;
+
 }
 li{
     font-family: 'Bitter', serif;
+
+}
+h1{
+    animation-name: heading_top;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+    
+}
+h1:after{
+    border-bottom: solid 3px #019fb6;
+  transition: left 250ms ease-in-out, right 250ms ease-in-out;
+  opacity: 0;
+}
+@keyframes heading_top {
+    0%{left: -1000px;}
+    50%{left: 50px;}
+    100%{left: 0;}
+}
+h1:hover:after{
+    opacity: 1;
 }

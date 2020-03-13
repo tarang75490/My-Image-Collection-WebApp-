@@ -1,6 +1,8 @@
 var image ;
 var counter = 1
 var tags = []
+var skip = 0
+var sortBy="title"
 function encodeImageFileAsURL(element) {
     var file = element.files[0];
     var reader = new FileReader();
@@ -12,6 +14,18 @@ function encodeImageFileAsURL(element) {
 }
 
 $(document).ready(function(){
+    console.log(localStorage.getItem('token'))
+    if (localStorage.getItem('token')){
+        $("#upload-but").attr("disabled", false);
+        $(".alert").css("display", "none");
+        $("#form2 :input").prop("disabled", false);
+        
+    }
+    else{
+        $("#upload-but").attr("disabled", true);
+        $("#form2 :input").prop("disabled", true);
+        $(".alert").css("display", "block");
+    }
     function camelize(str) {
         // Split the string at all space characters
         return str.split(' ')
@@ -22,12 +36,13 @@ $(document).ready(function(){
            // Join all the strings back together
            .join(" ")
      }
-    function read_images(data){
+    function read_images(data,skip,sortby){
         var myhtml2 = '';
-        console.log(data)
+        console.log(data,skip)
         $('#imagess').html('');
+
         $.ajax({
-            url:"http://localhost:3000/image/filter?limit=10&skip=0",
+            url:"http://localhost:3000/image/filter?limit=8&skip="+skip+"&sortby="+sortby,
             method:'POST',
             contentType:'application/json',
             dataType:'json',
@@ -56,7 +71,7 @@ $(document).ready(function(){
     }
     $( document ).ready(function(){
         var data ={}
-        read_images(data)} );
+        read_images(data,0,sortBy)} );
     // read_images();
     $('#filter').on('change',function(){
         if (($('#filter').val()) == ''){
@@ -68,9 +83,37 @@ $(document).ready(function(){
         }
     }
         console.log(data)
-        read_images(data)
+        read_images(data,0,sortBy)
     });  
-            
+    $('.page-link1').click(function(){
+        skip =  ($('.page-link1').text()-1)*8
+        read_images({},skip)
+    })
+    $('.page-link2').click(function(){
+        skip =  ($('.page-link2').text()-1)*8
+        read_images({},skip)
+    })
+    $('.page-link3').click(function(){
+        skip =  ($('.page-link3').text()-1)*8
+        read_images({},skip)
+    })
+         
+    $('#1').click(function(){
+        sortBy='title'
+        read_images({},skip,sortBy)
+    })
+    $('#2').click(function(){
+        sortBy='-title'
+        read_images({},skip,sortBy)
+    })
+    $('#3').click(function(){
+        sortBy='createdAt'
+        read_images({},skip,sortBy)
+    })
+    $('#4').click(function(){
+        sortBy='-createdAt'
+        read_images({},skip,sortBy)
+    })
 
 
 

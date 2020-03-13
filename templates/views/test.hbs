@@ -7,10 +7,11 @@
 
     {{>links}}
     <script src="js/image_js1.js"></script>
+     <link rel="stylesheet" href="./css/test.css" type="text/css">
 </head>
 <body>
   {{>header}}
-  <div class = 'container'><h1>My Testing Page</h1>
+  <div class = 'container'><h1>Upload Image</h1>
       <form id = 'form2'>
             <div class="form-group">
             <label for="title">Title:</label>
@@ -31,11 +32,16 @@
           </button>
           </div>
             <br>
-             <button type="submit"  class="btn btn-default">Submit</button>
+             <button type="submit" id ="upload-but" class="btn btn-primary " >Add Images</button>
      </form>
      <div id ="image-preview"></div>
+     <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Unauthorized !</strong> Create An Account To Upload images !!
+</div>
+
      </div>
-      
+    
 </div>
 </body>
 </html>

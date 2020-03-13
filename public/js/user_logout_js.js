@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('#user-logout').click(function(e){
                 e.preventDefault();
             $.ajax({
-                    url:"http://localhost:3000/users/logoutAll",
+                    url:"/users/logoutAll",
                     method:'POST',
                     dataType:"json",
                     beforeSend: function (xhr) {
@@ -13,7 +13,7 @@ $(document).ready(function(){
                        console.log(response);
                        localStorage.setItem('token', '');
                        window.setTimeout(function() {
-                           window.location.href = 'http://localhost:3000';
+                           window.location.href = '/home';
                        }, 100);
                     },
                     error: function(error){

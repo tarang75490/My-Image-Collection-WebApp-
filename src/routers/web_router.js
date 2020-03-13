@@ -30,7 +30,7 @@ app.get('/home',(req,res)=>{
 })
 app.get('/about',(req,res)=>{
     res.render('about',{
-        'name':'tarang'
+        'name':'Tarang Khetan'
     })
 })
 app.get('/all_users',(req,res)=>{

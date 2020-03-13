@@ -13,7 +13,7 @@ $(document).ready(function(){
          }
          
          $.ajax({
-             url:"http://localhost:3000/users/me",
+             url:"/users/me",
              method:'get',
              dataType:'json',
             //  headers    :JSON.stringify({Authorization : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTY3MWE2ODcwN2RkNDRlNWNlMGMzZWMiLCJpYXQiOjE1ODM4MTY0Mzl9.fj4p2P0bR0XxQeuI9KbI8siz-pdOkjsMSKzjCOmBXdw"}),

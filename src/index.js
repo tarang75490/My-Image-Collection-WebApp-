@@ -72,7 +72,8 @@ app.post('/image/filter',async (req,res) => {
         var images;
         console.log(req.query)
         // if (req.body.title == ''){
-        images = await Image_m.find(req.body).limit(parseInt(req.query.limit)).skip(parseInt(req.query.skip))
+        var sort= req.query.sortby
+       images = await Image_m.find({}).limit(parseInt(req.query.limit)).skip(parseInt(req.query.skip)).sort(sort)
     // }
     //     else{
     //     images = await Image_m.find(req.body)

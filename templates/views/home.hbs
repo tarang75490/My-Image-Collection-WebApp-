@@ -5,12 +5,33 @@
     <meta charset="UTF-8">
     
     {{>links}}
+
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="js/home.js"></script>
 </head>
+
 <body>
   {{>header}}
   <div class = 'container'>
-      <h1>My Home Page</h1>
-    {{name}}
+      <div class="alert alert-1">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Succesfully Logged In !</strong> Upload images and Enjoy!!
+</div>
+      <div class="alert alert-2">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Successfully Logout !!!</strong> Visit Again!
+</div>
+
+       <header id="main-heading"><h1>Welcome to Image Collection</h1></header>
+
+    <div id="content" class ="container123">This Website helps to make your own Image Collection with the title and tages associated to it.Through this We Can See the images
+         published by Various User .One of the good Feature of it is to helps us get the images by the tags we want. In future You will have 
+         option to Post the images of your profile to the Public.
+        Use this and Enjoy!!!
+    </div>
+    <a href="/about" class="btn">Read More</a>
+    {{!-- {{name}} --}}
+
   </div>
 </body>
 </html>

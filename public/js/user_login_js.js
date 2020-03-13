@@ -2,7 +2,7 @@
 $(document).ready(function(){
     if(localStorage.getItem('token')){
         window.setTimeout(function() {
-            window.location.href = 'http://localhost:3000';
+            window.location.href = '/home';
         }, 0000);
     }
 
@@ -13,7 +13,7 @@ $(document).ready(function(){
                      email: $('#email').val()
                  }
              $.ajax({
-                     url:"http://localhost:3000/users/login",
+                     url:"/users/login",
                      method:'POST',
                      contentType:"application/json",
                      dataType:"json",
@@ -23,7 +23,7 @@ $(document).ready(function(){
                         localStorage.setItem('token', data.token);
                         localStorage.setItem('name', data.user.name);
                         window.setTimeout(function() {
-                            window.location.href = 'http://localhost:3000';
+                            window.location.href = '/home';
                         }, 100);
                      },
                      error: function(error){

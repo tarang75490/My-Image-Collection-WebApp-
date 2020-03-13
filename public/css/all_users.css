@@ -1,0 +1,32 @@
+/* .alert-1{
+    background-color: #12475f;
+}
+/* .alert-2{
+    background-color: green;
+} */
+#list{
+    box-shadow: 5px 5px  18px black;
+}
+.alert {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    color: #12475f;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: black;
+    font-weight: bold;
+    float: right;
+    font-size: 30px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: red;
+  }
