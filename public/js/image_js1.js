@@ -42,7 +42,7 @@ $(document).ready(function(){
         $('#imagess').html('');
 
         $.ajax({
-            url:"http://localhost:3000/image/filter?limit=8&skip="+skip+"&sortby="+sortby,
+            url:"/image/filter?limit=8&skip="+skip+"&sortby="+sortby,
             method:'POST',
             contentType:'application/json',
             dataType:'json',
@@ -127,7 +127,7 @@ $(document).ready(function(){
         console.log(localStorage.getItem('token'))
         tags.push(data.title.toLowerCase())
         $.ajax({
-                url:"http://localhost:3000/image",
+                url:"/image",
                 method:'POST',
                 contentType:"application/json",
                 dataType:"json",//"text" -- to accept string response

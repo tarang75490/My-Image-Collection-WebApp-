@@ -6,10 +6,8 @@ $(document).ready(function(){
     }
     else{
         $(".alert-1").css("display","none");
-        if (window.location.href == ''){
-            $(".alert-2").css("display","none");
-        }else{
-            $(".alert-2").css("display","block");
         }
+        // console.log(window.history.back())
     }
-})
+    
+    )

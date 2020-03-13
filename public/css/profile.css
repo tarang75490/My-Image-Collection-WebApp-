@@ -1,0 +1,19 @@
+#profile-content{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:150%;
+}
+
+strong{
+    background-color: #12475f;
+    color: white;
+    padding: 8px;;
+        animation-name: heading_top;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        position: relative;
+        
+}
+@keyframes heading_top {
+    0%{left: -1000px;}
+    100%{left: 0;}
+}

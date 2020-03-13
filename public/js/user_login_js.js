@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+    $('.alert').css('display','none');
     if(localStorage.getItem('token')){
         window.setTimeout(function() {
             window.location.href = '/home';
@@ -27,6 +28,7 @@ $(document).ready(function(){
                         }, 100);
                      },
                      error: function(error){
+                        $('.alert').css('display','block');
                          console.log(error)
                      }
             

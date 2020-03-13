@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     {{>links}}
+    <link rel="stylesheet" href="./css/login.css">
     <script src="js/user_login_js.js"></script>
 </head>
 <body>
@@ -29,8 +30,13 @@
     <div class="form-group">        
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
-    </div>
+            
   </form>
+  <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    <strong>Not Authenticated !!!</strong> Please Check the Credentials !!!
+              </div>
     </div>
+    
 </body>
 </html>

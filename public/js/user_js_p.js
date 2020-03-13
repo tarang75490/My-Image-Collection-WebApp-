@@ -23,11 +23,11 @@ $(document).ready(function(){
             success: function(item){
                     console.log(item)
                      myhtml = `
-                     <div><h3>Name  : ${item.user.name}</h3> </div>
-                     <div><h3>Age : ${item.user.age}</h3> </div>
-                     <div><h3>Phone Number :${item.user.phone_number}</h3> </div>
-                     <div><h3>Email : ${item.user.email}</h3> </div>
-                     <div><h3>Password : ${item.user.password}</h3> </div>
+                     <div class = "Line"><strong>Name   </strong>&emsp; ${item.user.name} </div>
+                     <br>
+                     <div class = "Line"><strong>Age  </strong>&emsp;  ${item.user.age} </div><br>
+                     <div class = "Line"><strong>Phone Number </strong>&emsp;   ${item.user.phone_number}</div><br>
+                     <div class = "Line"><strong>Email  </strong>&emsp; ${item.user.email} </div><br>
                      `;
                      $('#profile-content').html(myhtml);
                      myhtml=``;

@@ -53,8 +53,8 @@ body{
     padding:10px 7px;
     animation-name: btn;
     animation-fill-mode: forwards;
-    animation-duration: 2s ;
-    animation-delay: 3s;
+    animation-duration: 1s ;
+    animation-delay: 2s;
     transition-property: transform;
     transition-duration: 1s;
     

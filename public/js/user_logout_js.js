@@ -1,5 +1,8 @@
 
 $(document).ready(function(){
+    $(".closebtn").click(function(){
+        window.location.reload(true);
+    })
     $('#user-logout').click(function(e){
                 e.preventDefault();
             $.ajax({
