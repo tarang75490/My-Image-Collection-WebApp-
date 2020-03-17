@@ -37,7 +37,7 @@ app.use(express.static(publicstaticpath))
 
 //     next()
 // })
-app.use(express.json({limit: '50mb'}))
+app.use(express.json({limit: '100mb'}))
 
 
 
@@ -73,7 +73,7 @@ app.post('/image/filter',async (req,res) => {
         console.log(req.query)
         // if (req.body.title == ''){
         var sort= req.query.sortby
-       images = await Image_m.find({}).limit(parseInt(req.query.limit)).skip(parseInt(req.query.skip)).sort(sort)
+       images = await Image_m.find(req.body).limit(parseInt(req.query.limit)).skip(parseInt(req.query.skip))    // .sort(sort)
     // }
     //     else{
     //     images = await Image_m.find(req.body)

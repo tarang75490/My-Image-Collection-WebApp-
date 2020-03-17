@@ -36,13 +36,13 @@ $(document).ready(function(){
            // Join all the strings back together
            .join(" ")
      }
-    function read_images(data,skip,sortby){
+    function read_images(data,skip){
         var myhtml2 = '';
         console.log(data,skip)
         $('#imagess').html('');
 
         $.ajax({
-            url:"/image/filter?limit=8&skip="+skip+"&sortby="+sortby,
+            url:"/image/filter?limit=8&skip="+skip,  //"&sortby="+sortby,
             method:'POST',
             contentType:'application/json',
             dataType:'json',
@@ -86,16 +86,16 @@ $(document).ready(function(){
         read_images(data,0,sortBy)
     });  
     $('.page-link1').click(function(){
-        skip =  ($('.page-link1').text()-1)*8
-        read_images({},skip)
+        skip =  (0)*8
+        read_images({},skip,sortBy)
     })
     $('.page-link2').click(function(){
-        skip =  ($('.page-link2').text()-1)*8
-        read_images({},skip)
+        skip =  (1)*8
+        read_images({},skip,sortBy)
     })
     $('.page-link3').click(function(){
         skip =  ($('.page-link3').text()-1)*8
-        read_images({},skip)
+        read_images({},skip,sortBy)
     })
          
     $('#1').click(function(){
